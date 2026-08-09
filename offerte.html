@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Jo Van Beneden Concepts | Vakwerk en maatwerk </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Fraunces:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <p class="logo">Jo Van Beneden <span>Concepts</span></p>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="dienst.html">Onze Diensten</a>
+            <a href="contact.html">Contacteer ons</a>
+            <a href="offerte.html" class="nav-cta">Vraag een offerte aan</a>
+        </nav>
+    </header>
+<main class="offerte">
+    <div class="offerte-grid">
+        <div class="offerte-intro">
+            <p class="eyebrow">Offerte</p>
+            <h1>Vertel ons over je project</h1>
+            <p class="lead">Beschrijf kort wat je voor ogen hebt. Hoe concreter, hoe beter we je kunnen inschatten — en hoe sneller je een passend voorstel krijgt.</p>
+
+            <ol class="process-steps">
+                <li>
+                    <span class="step-index">01</span>
+                    <div>
+                        <h3>Je stuurt je aanvraag</h3>
+                        <p>Vul het formulier in met je gegevens en een korte omschrijving van het project.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="step-index">02</span>
+                    <div>
+                        <h3>Wij nemen contact op</h3>
+                        <p>Binnen 2 werkdagen antwoorden we met vragen of een eerste voorstel.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="step-index">03</span>
+                    <div>
+                        <h3>Je krijgt een offerte op maat</h3>
+                        <p>Afgestemd op je project, zonder verrassingen achteraf.</p>
+                    </div>
+                </li>
+            </ol>
+        </div>
+
+        <div class="offerte-form-wrap">
+            <form id="form" class="form-card" action="https://api.web3forms.com/submit" method="POST">
+                <div class="field-row">
+                    <div class="field">
+                        <label for="naam">Naam</label>
+                        <input type="text" name="naam" id="naam" placeholder="Je naam" required>
+                    </div>
+                    <div class="field">
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" id="email" placeholder="je@email.com" required>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="bericht">Beschrijf je project</label>
+                    <textarea name="bericht" id="bericht" placeholder="Waar kunnen we je mee helpen?" required></textarea>
+                </div>
+
+                <button type="submit">Verstuur aanvraag</button>
+            </form>
+
+            <div id="formSuccess" class="form-success" hidden>
+                <h2>Bedankt!</h2>
+                <p>Je offerte-aanvraag is succesvol verstuurd. We nemen zo snel mogelijk contact met je op.</p>
+                <a href="index.html" class="btn">Terug naar Home</a>
+            </div>
+        </div>
+    </div>
+</main>
+        <script src="js/script.js"></script>
+</body>
+
+</html>
