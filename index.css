@@ -379,3 +379,74 @@ main.offerte {
     gap: 1rem;
   }
 }
+
+/* Diensten-pagina */
+main.diensten {
+  align-items: flex-start;
+  padding: 4.5rem 5% 6rem;
+}
+
+main.diensten > * {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.diensten-intro {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.diensten-intro h1 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(2rem, 3.4vw, 2.6rem);
+  font-weight: 600;
+  margin: 0;
+}
+
+.service-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+}
+
+.service-list li {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--accent);
+  border-radius: 10px;
+  padding: 1.8rem 1.6rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-list li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px -20px rgba(22, 32, 43, 0.22);
+}
+
+.service-list h2 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.35;
+}
+
+@media (max-width: 860px) {
+  .service-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  main.diensten {
+    padding: 3rem 6% 4rem;
+  }
+
+  .service-list {
+    grid-template-columns: 1fr;
+  }
+}
