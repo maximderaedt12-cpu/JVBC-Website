@@ -40,7 +40,7 @@ header {
 }
 
 .logo span {
-  color: darkblue;
+  color: var(--accent-dark);
 }
 
 nav {
