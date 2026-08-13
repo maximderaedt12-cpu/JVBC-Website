@@ -1,5 +1,6 @@
 const form = document.getElementById('form');
 const submitBtn = form.querySelector('button[type="submit"]');
+const successMessage = document.getElementById('formSuccess');
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -20,15 +21,16 @@ form.addEventListener('submit', async (e) => {
         const data = await response.json();
 
         if (response.ok) {
-            alert("Success! Your message has been sent.");
-            form.reset();
+            form.hidden = true;
+            successMessage.hidden = false;
         } else {
             alert("Error: " + data.message);
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
         }
 
     } catch (error) {
         alert("Something went wrong. Please try again.");
-    } finally {
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
     }
