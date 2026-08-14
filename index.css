@@ -196,6 +196,10 @@ main.offerte {
   gap: 1.4rem;
 }
 
+.form-card[hidden] {
+  display: none;
+}
+
 .field-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
